@@ -16,10 +16,10 @@ global.owner = process.env.OWNER_NUMBER
 global.THUMB_IMAGE =
   process.env.THUMB_IMAGE ||
   process.env.IMAGE ||
-  "https://telegra.ph/file/17c8ba84a7761eed633f6.jpg,https://telegra.ph/file/7275967ae7b5283fada69.jpg";
+  "https://telegra.ph/file/187d36d4cbe12a19a77e4.jpg,https://telegra.ph/file/7615e8957b6efa9e84f38.jpg,https://telegra.ph/file/66b884192c27df2020403.jpg,https://telegra.ph/file/58319db16eed44d646c4f.jpg";
 global.userImages =
   process.env.USER_IMAGES ||
-  "https://telegra.ph/file/7275967ae7b5283fada69.jpg,https://telegra.ph/file/c3049cd3ac77f371e119e.jpg,https://telegra.ph/file/a22200a780671e0e32383.jpg,https://telegra.ph/file/85fe388fdd14930cf86a0.jpg,https://telegra.ph/file/ba9ced500f9eca7db8acb.mp4";
+  "https://telegra.ph/file/66b884192c27df2020403.jpg,https://telegra.ph/file/58319db16eed44d646c4f.jpg,https://telegra.ph/file/7615e8957b6efa9e84f38.jpg,https://telegra.ph/file/187d36d4cbe12a19a77e4.jpg";
 ///===========[global iMPORTS]====================//
 
 module.exports = {
@@ -27,11 +27,11 @@ module.exports = {
   HANDLERS: process.env.PREFIX || ".",
   BRANCH: process.env.BRANCH || "main",
   VERSION: process.env.VERSION || "1.0.0",
-  caption: process.env.CAPTION || "`©QUEEN_ANITA-V2`",
-  author: process.env.PACK_AUTHER || "QUEEN_ANITA-V2",
-  packname: process.env.PACK_NAME || "A N I T A",
-  botname: process.env.BOT_NAME || "QUEEN_ANITA-V2",
-  ownername: process.env.OWNER_NAME || "David Cyril",
+  caption: process.env.CAPTION || "`PASCHAL-MD`",
+  author: process.env.PACK_AUTHER || "PASCHAL-MD",
+  packname: process.env.PACK_NAME || "PASCH",
+  botname: process.env.BOT_NAME || "PASCHAL-MD",
+  ownername: process.env.OWNER_NAME || "PASCHAL",
   errorChat: process.env.ERROR_CHAT || "",
   KOYEB_API: process.env.KOYEB_API || "false",
   REMOVE_BG_KEY: process.env.REMOVE_BG_KEY || "",
@@ -42,7 +42,7 @@ module.exports = {
   HEROKU: process.env.HEROKU_APP_NAME && process.env.HEROKU_API_KEY,
   aitts_Voice_Id: process.env.AITTS_ID || "37",
   ELEVENLAB_API_KEY: process.env.ELEVENLAB_API_KEY || "",
-  WORKTYPE: process.env.WORKTYPE || process.env.MODE || "public",
+  WORKTYPE: process.env.WORKTYPE || process.env.MODE || "private",
   LANG: (process.env.THEME || "WhatsApp").toUpperCase(),
 };
 global.port = process.env.PORT;
@@ -52,10 +52,10 @@ global.location = "";
 global.allowJids = process.env.ALLOW_JID || "null";
 global.blockJids = process.env.BLOCK_JID || "null";
 global.timezone = process.env.TZ || process.env.TIME_ZONE || "Africa/Lagos";
-global.github = process.env.GITHUB || "https://github.com/DeeCeeXxx/QUEEN_ANITA-V2";
+global.github = process.env.GITHUB || "https://github.com/Nastyc1g/PASCHAL-MD";
 global.gurl = process.env.GURL || "";
 global.website = process.env.GURL || "";
-global.devs = "2349066528353";
+global.devs = "2347066575685";
 global.msg_style = process.env.STYLE || "4";
 global.session_reset = process.env.SS_RESET || "false";
 global.gdbye = process.env.GOODBYE || "false";
@@ -64,7 +64,7 @@ global.warncount = process.env.WARN_COUNT || 3;
 global.disablepm = process.env.DISABLE_PM || "false";
 (global.disablegroup = process.env.DISABLE_GROUPS || "false"),
   (global.MsgsInLog = process.env.MSGS_IN_LOG || "true");
-global.waPresence = process.env.WAPRESENCE || "online";
+global.waPresence = process.env.WAPRESENCE || "typing";
 global.readcmds = process.env.READ_COMMAND || "false";
 global.readmessage = process.env.READ_MESSAGE || "false";
 global.readmessagefrom = process.env.READ_MESSAGE_FROM || "null";
