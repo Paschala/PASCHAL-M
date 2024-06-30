@@ -22,8 +22,8 @@ jobs:
         node-version: '20.x'
     
     - name: Install dependencies
-      run: npm install
+      run: yarn install
     
     - name: Build the project
-      run: npm run build --if-present
+      run: yarn run build --if-present
  ￼Enter
