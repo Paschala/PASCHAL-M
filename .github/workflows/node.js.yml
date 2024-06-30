@@ -1,28 +1,43 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: Node.js CI
 
 on:
   push:
-    branches: ["main"]
+    branches: [ master ]
   pull_request:
-    branches: ["main"]
+    branches: [ master ]
 
 jobs:
-  build:
+  build_ubuntu:
 
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: ["14.x", "16.x", "18.x", "20.x"]
+
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
       with:
-        node-version: '16.x'
-    
-    - name: Install dependencies
-      run: npm install
-    
-    - name: Build the project
-      run: npm run build --if-present
+        node-version: ${{ matrix.node-version }}
+    - run: npm i
+    - run: npm test
+
+  build_windows:
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        node-version: ["14.x", "16.x", "18.x", "20.x"]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - if: matrix.node-version == '14.x'
+      run: npm install -g npm@9 # node 14 comes with npm 6, which has some known bugs with dependency resolution
+    - run: npm i
+    - run: npm test
