@@ -19,13 +19,13 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install
 
       - name: Run build
         run: npm run build
 
       - name: Run tests
-        run: npm test
+        run: yarn test
 
       - name: Re-trigger workflow
         if: ${{ success() }}  # Only re-trigger if previous steps succeeded
